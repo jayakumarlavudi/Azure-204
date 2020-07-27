@@ -1,0 +1,2 @@
+Create Linix vm using poer shell 
+ New-AzVm -ResourceGroupName learn-cbc436eb-7bf0-4d0b-acc8-584a22784196 -Name "testvm-eus-01" -Credential (Get-Credential) -Location "East US" -Image UbuntuLTS -OpenPorts 22
