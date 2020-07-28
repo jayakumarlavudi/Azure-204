@@ -1,2 +1,30 @@
 Create Linix vm using poer shell 
  New-AzVm -ResourceGroupName learn-cbc436eb-7bf0-4d0b-acc8-584a22784196 -Name "testvm-eus-01" -Credential (Get-Credential) -Location "East US" -Image UbuntuLTS -OpenPorts 22
+
+PowerShell credential request
+Enter your credentials.User: **********
+Password for user eci_jay@outlook.com: ***********
+
+Response : 
+
+ResourceGroupName        : learn-cbc436eb-7bf0-4d0b-acc8-584a22784196
+Id                       : /subscriptions/ac032214-4f93-43c0-97da-2eff415f2701/resourceGroups/learn-cbc
+436eb-7bf0-4d0b-acc8-584a22784196/providers/Microsoft.Compute/virtualMachines/testvm-eus-01
+VmId                     : 7c8f6443-b956-4bf6-8f1a-2979fc6f1720
+Name                     : testvm-eus-01
+Type                     : Microsoft.Compute/virtualMachines
+Location                 : eastus
+Tags                     : {}
+HardwareProfile          : {VmSize}
+NetworkProfile           : {NetworkInterfaces}
+OSProfile                : {ComputerName, AdminUsername, LinuxConfiguration, Secrets,
+AllowExtensionOperations, RequireGuestProvisionSignal}
+ProvisioningState        : Succeeded
+StorageProfile           : {ImageReference, OsDisk, DataDisks}
+FullyQualifiedDomainName : testvm-eus-01-10bd27.East US.cloudapp.azure.com
+
+
+Assign the VM object to a variable ($vm).
+ 
+$vm = Get-AzVM -Name "testvm-eus-01" -ResourceGroupName learn-cbc436eb-7bf0-4d0b-acc8-
+584a22784196
